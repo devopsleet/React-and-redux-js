@@ -10,9 +10,23 @@ const App = () =>{
     // return statement
     return (
         <div className="ui container comment">
-            <ApprovalCard />
+
+            <ApprovalCard>
+              are you share?
+            </ApprovalCard>
+
+
+            <ApprovalCard>
            <CommentDetail author="Gagan" TimeAgo="6"/>
-           
+           </ApprovalCard>
+
+           <ApprovalCard>
+           <CommentDetail author="Gagan" TimeAgo="6"/>
+           </ApprovalCard>
+
+           <ApprovalCard>
+           <CommentDetail author="Gagan" TimeAgo="6"/>
+           </ApprovalCard>
         </div>
     );
 };

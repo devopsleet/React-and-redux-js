@@ -20,6 +20,18 @@ constructor(props){
 
 }
 
+componentDidMount(){
+    window.navigator.geolocation.getCurrentPosition(
+        (position) =>  this.setState({lat:position.coords.latitude}),
+        (err) =>  this.setState({errorMessage: err.message})
+        );
+
+}
+
+componentDidUpdate(){
+    console.log('My component was just updated -t rerendered');
+}
+
     //React says we have to define render
 render(){
     if (this.state.errorMessage && !this.state.lat){
